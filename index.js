@@ -2,19 +2,24 @@ const got = require('got')
 
 module.exports = url => {
   const start = process.hrtime()
+  const opts = { timeout: 2000 }
 
-  return got.head(url).then(res => receive(res, start))
+  return got.head(url, opts)
+    .then(res => receive(res, start))
+    .catch(err => ({ code: 500, err, time: diff(start) }))
 }
 
 const receive = (res, start) => {
-  const diff = process.hrtime(start)
-  const total = diff[0] * 1e3 + diff[1] * 1e-6
-
   return {
     code: res.statusCode,
-    time: total,
+    time: diff(start),
     headers: res.headers
   }
+}
+
+const diff = start => {
+  const diff = process.hrtime(start)
+  return diff[0] * 1e3 + diff[1] * 1e-6
 }
 
 // Response time algorithm from Doug Wilson in response-time

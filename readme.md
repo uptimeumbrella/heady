@@ -15,8 +15,11 @@ const heady = require('heady')
 
 heady('google.com')
   .then(doStuff)
-  .catch(handleErrors)
 ```
+
+###### Errors
+
+When an error is encountered, the code is set to `500` and an `err` object is added.
 
 ## License
 
