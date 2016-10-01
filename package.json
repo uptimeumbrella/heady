@@ -1,0 +1,22 @@
+{
+  "name": "heady",
+  "description": "Get the headers for a url",
+  "author": "John Otander",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "johnotander/heady",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "got": "^6.5.0"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}
