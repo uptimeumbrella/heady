@@ -14,7 +14,8 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "got": "^6.5.0"
+    "got": "^6.5.0",
+    "is-present": "^1.0.0"
   },
   "devDependencies": {
     "ava": "*"
