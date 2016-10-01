@@ -1,6 +1,11 @@
 const got = require('got')
+const isBlank = require('is-blank')
 
 module.exports = url => {
+  if (isBlank(url) || typeof url !== 'string') {
+    throw new TypeError('heady expected a url as a string')
+  }
+
   const start = process.hrtime()
   const opts = { timeout: 2000 }
 
