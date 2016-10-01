@@ -15,6 +15,7 @@ const heady = require('heady')
 
 heady('google.com')
   .then(doStuff)
+  .catch(handleErrors)
 ```
 
 ## License
