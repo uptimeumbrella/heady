@@ -1,4 +1,4 @@
-# heady [![Build Status](https://secure.travis-ci.org/johnotander/heady.svg?branch=master)](https://travis-ci.org/johnotander/heady) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# ☔ heady
 
 Get the headers for a url
 
@@ -11,9 +11,10 @@ npm install --save heady
 ## Usage
 
 ```javascript
-var heady = require('heady')
+const heady = require('heady')
 
-heady()  // => true
+heady('google.com')
+  .then(doStuff)
 ```
 
 ## License
