@@ -1,6 +1,7 @@
 # ☔ heady
 
-Get the headers for a url
+Get the headers for a url.
+Used by [Uptime Umbrella](https://uptimeumbrella.com).
 
 ## Installation
 
