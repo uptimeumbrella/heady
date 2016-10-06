@@ -8,7 +8,7 @@ module.exports = url => {
 
   const start = process.hrtime()
 
-  return got.head(url, { timeout: 1000, retries: 1 })
+  return got.head(url, { timeout: 2000, retries: 1 })
     .then(res => receive(res, start))
     .catch(err => ({ code: 500, err, time: diff(start) }))
 }
